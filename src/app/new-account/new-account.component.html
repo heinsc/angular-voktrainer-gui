@@ -1,1 +1,17 @@
-<p>new-account works!</p>
+<div style="padding: 13px;">
+    <div *ngFor="let appuser of appUsers" style="margin-top:11px;">
+        <h1>
+            <h2>{{appuser.email}}</h2>
+            <h3>{{appuser.password}}}
+            </h3>
+        </h1>
+        <h4>
+            <p>
+                {{appuser.lastlogin}}
+            </p>
+        </h4>
+        <div>
+      <button > Buy product</button>
+    </div>
+    </div>
+</div>
