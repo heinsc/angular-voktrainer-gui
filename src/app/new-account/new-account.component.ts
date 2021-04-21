@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-new-account',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewAccountComponent implements OnInit {
 
-  constructor() { }
+  allAppUsers = [];
 
-  ngOnInit(): void {
+  constructor(private appUserService: DataService) { }
+
+  ngOnInit() {
+
+    this.appUserService.sendGetRequestAppUsers().subscribe((appUsers: any[])=>{
+      console.log(appUsers);
+      this.allAppUsers = appUsers;
+    })  
   }
 
 }
