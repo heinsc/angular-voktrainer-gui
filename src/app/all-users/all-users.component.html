@@ -1,1 +1,10 @@
-<p>all-users works!</p>
+<div>
+  <h1>
+    List Of All Users
+  </h1>
+  <ul>
+    <li *ngFor="let user of allUsers">
+      {{ user.eMailAddress }}
+    </li>
+  </ul>
+</div>
