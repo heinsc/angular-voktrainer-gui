@@ -8,9 +8,9 @@ export class AppUserService {
 
   constructor(private httpClient: HttpClient) { }
   getAllUsers() {
-    return this.httpClient.get("http://localhost:8080/appUsers");
+    return this.httpClient.get("http://192.168.178.35:8080/appUsers");
   }
   getUserById(id) {
-    return this.httpClient.get(`http://localhost:8080/appUsers/${id}`)
+    return this.httpClient.get(`http://192.168.178.35:8080/appUsers/${id}`)
   }
 }
